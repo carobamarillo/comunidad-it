@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter - Sign in</title>
+    <style type="text/css">
+      #username,#password {
+        font-family: "Helvetica Neue",Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 20px;
+        text-decoration: none solid rgb(20,23,26);
+        word-spacing: 0;
+        background-color: #FFF;
+        background-position: 0% 0%;
+        color: #14171A;
+        height: 30.6667px;
+        width: 260px;
+        border: 1px solid #E6ECF0;
+        margin: 12px 0 0 0;
+        padding: 4px 4px;
+        display: inline-block;
+        transform: none;
+        box-sizing: border-box;  
+        border-radius: 3px;
+      }
+      .forgot {
+        color: #1C94E0;
+        font-family: "Helvetica Neue",Arial, Helvetica, sans-serif;
+        background-color: #FFF;
+        font-size: 14px;
+      }
+      #login {
+        border-radius: 100px 100px;
+        border: 2px solid #1C94E0;
+        font-family: "Helvetica Neue",Arial, Helvetica, sans-serif;
+        background-color: #FFF;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        text-align: center;
+        color: #1C94E0;
+        width: 80px;
+        height: 34px;
+
+      }
+      label {
+        font-family: "Helvetica Neue",Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="get" enctype="multipart/form-data">
+        <input type="text" id="username" name="username" placeholder="Phone,email or username" />
+        <br />
+        <input type="password" id="password" name="password" placeholder="Password" />
+        <input id="login" type="submit" name="submit" value="Log in"/>
+        <br />
+        <input class="checkbox" type="checkbox" name="remember me" value="remember me" checked />
+        <label>Remember me •</label>
+        <a class="forgot" href="#">Forgot password?</a>
+    </form>
+  </body>
+</html>

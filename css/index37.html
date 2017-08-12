@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseudo Elementos</title>
+        <style type="text/css">
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            nav a {
+                background-color: #C2FAFE;
+                border: 2px solid #0B9EA8;
+                padding: 10px;
+                text-decoration: none;
+                color: #0B9EA8;
+                margin: 0;
+            }
+            nav a:hover {
+                text-decoration: underline;
+                background-color: #0B9EA8;
+                color: white;
+            }
+            nav a:active {
+                background-color: #046A71;
+            }
+            li {
+                padding: 20px;
+                background-color: #eee;
+                border-bottom: 1px solid black;
+            }
+            li:hover {
+                background-color: #ccc;
+                font-size: 120%;
+            }
+            li:last-child {
+                border: none;
+            }
+            li:first-child {
+                font-weight: bold; 
+            }
+            li:active {
+                text-decoration: line-through;
+            }
+            nav {
+                margin-bottom: 50px;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <h1>Pseudo Elementos</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">News</a>
+        </nav>
+        <ul>
+            <li>Suspendisse faucibus nulla eget arcu laoreet, at convallis nisi commodo.</li>
+            <li>Nullam interdum odio tincidunt, consectetur neque ac, dictum neque.</li>
+            <li>Duis sit amet velit et ligula pulvinar imperdiet vel euismod ipsum.</li>
+            <li>Sed dapibus risus sed nibh vulputate viverra.</li>
+            <li>Vivamus dictum massa quis arcu posuere, id bibendum felis ullamcorper.</li>
+        </ul>
+    </body>
+</html>

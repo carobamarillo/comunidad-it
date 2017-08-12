@@ -1,0 +1,118 @@
+body {
+	margin: 0;
+	background: #FFF;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #FFF;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  color: #444;
+  padding-top: 15px;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #00AB6B;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #00AB6B;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+.network {
+    font-size: 20px;
+    padding: 23px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+#more {
+    display: inline-block;
+    float: none;
+    margin-left: 650px;
+    margin-bottom: 0;
+}
+hr {
+    margin: 0;
+}
+
+img {
+    width: 16px;
+    height: 16px;
+    padding-top: 25px;
+    padding-left: 2px;
+}
+
+.noticia {
+    text-decoration: none;
+}
+  
+table {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+#js {
+   text-decoration: underline;
+}
+#section2 {
+    width: 200px;
+    margin-bottom: 12px;
+}
+footer {
+    height: 47px;
+    width: auto;
+    border-collapse: collapse;
+}

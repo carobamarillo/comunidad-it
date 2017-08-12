@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gmail-Sing In</title>
+        <style type="text/css">
+            form {
+                background-color: #F1F1F1;
+                color: #333;
+                height: 600px;
+                width: 320px;
+                padding: 25px 25px;
+                display: block;
+            }
+            #name {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 13px;
+                word-spacing: 0;
+                color: #222;
+                height: 13px;
+                width: 35px;
+                margin-bottom: 7px;
+                display: inline-block;
+            }
+            #first {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                word-spacing: 0;
+                height: 29px;
+                width: 150px;
+                padding: 0 8px;
+                border: 1px solid #B9B9B9;
+                display: inline-block;
+                box-sizing: border-box;
+                border-radius: 1px;
+            }
+            #last {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                word-spacing: 0;
+                height: 29px;
+                width: 150px;
+                padding: 0 8px;
+                border: 1px solid #B9B9B9;
+                display: inline-block;
+                margin-left: 5.2px;
+                box-sizing: border-box;
+                border-radius: 1px;                
+            }
+            #username {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                word-spacing: 0;
+                height: 29px;
+                width: 312px;
+                border: 1px solid #B9B9B9;
+                padding: 0 8px;
+                display: inline-block;
+                box-sizing: border-box;
+                border-radius: 1px;
+            }
+            #choose {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 13px;
+                word-spacing: 0;
+                color: #222;
+                height: 13px;
+                width: 312px;
+                margin: 14px 0 0 0;
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+            .create {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 13px;
+                word-spacing: 0;
+                color: #222;
+                height: 13px;
+                width: 312px;
+                margin: 14px 0 0 0;
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+            #create {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                word-spacing: 0;
+                height: 29px;
+                width: 312px;
+                border: 1px solid #B9B9B9;
+                padding: 0 8px;
+                display: inline-block;
+                box-sizing: border-box;
+                border-radius: 1px;
+            }
+            .confirm {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 13px;
+                word-spacing: 0;
+                color: #222;
+                height: 13px;
+                width: 312px;
+                margin: 14px 0 0 0;
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+            #confirm {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                word-spacing: 0;
+                height: 29px;
+                width: 312px;
+                border: 1px solid #B9B9B9;
+                padding: 0 8px;
+                display: inline-block;
+                box-sizing: border-box;
+                border-radius: 1px;
+            }
+            .birthday {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 13px;
+                word-spacing: 0;
+                color: #222;
+                height: 13px;
+                width: 312px;
+                margin: 14px 0 0 0;
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+            #month {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                font-weight: bold;
+                line-height: 27px;
+                word-spacing: 0;
+                color: #333;
+                height: 26px;
+                width: 108px;
+                border: 1px solid #C6C6C6;
+                margin: -3px 0 0 0;
+                padding: 0 18px 0 6px;
+                min-width: 46px;
+                position: relative;
+                display: inline-block;
+                border-radius: 2px;
+            }
+            #day {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                word-spacing: 0;
+                height: 24px;
+                width: 60px;
+                border: 1px solid #B9B9B9;
+                padding: 0 8px;
+                display: inline-block;
+                border-radius: 1px;
+                vertical-align: middle;        
+            }
+            #year {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                word-spacing: 0;
+                height: 24px;
+                width: 96px;
+                border: 1px solid #B9B9B9;
+                padding: 0 8px;
+                display: inline-block;
+                border-radius: 1px;
+            }
+            .gender {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 13px;
+                word-spacing: 0;
+                color: #222;
+                height: 13px;
+                width: 312px;
+                margin: 14px 0 0 0;
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+            #gender {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                font-weight: bold;
+                line-height: 27px;
+                word-spacing: 0;
+                color: #333;
+                height: 26px;
+                width: 312px;
+                border: 1px solid #C6C6C6;
+                margin: -3px 0 0 0;
+                padding: 0 18px 0 6px;
+                min-width: 46px;
+                position: relative;
+                display: inline-block;
+                border-radius: 2px;
+            }
+            .mobile {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 13px;
+                word-spacing: 0;
+                color: #222;
+                height: 13px;
+                width: 312px;
+                margin: 14px 0 0 0;
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+            #mobile {
+                background: url(AR.gif) no-repeat; 
+                padding-left: 8px 2px 0 5px;
+                height: 28px;
+                width: 37px;
+                display: inline-block;
+                background-position: 4px 5px;
+                border-radius: 1px;
+            }
+            #number {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                word-spacing: 0;
+                height: 28px;
+                width: 253px;
+                border: 1px solid #B9B9B9;
+                padding: 0 8px;
+                display: inline-block;
+                border-radius: 1px;
+                margin-left: 0;
+            }
+            .email {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 13px;
+                word-spacing: 0;
+                color: #222;
+                height: 13px;
+                width: 312px;
+                margin: 14px 0 0 0;
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+            #email {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                word-spacing: 0;
+                height: 29px;
+                width: 312px;
+                border: 1px solid #B9B9B9;
+                padding: 0 8px;
+                display: inline-block;
+                box-sizing: border-box;
+                border-radius: 1px;
+            }
+            .location {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 13px;
+                word-spacing: 0;
+                color: #222;
+                height: 13px;
+                width: 312px;
+                margin: 14px 0 0 0;
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+            #location {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                font-weight: bold;
+                line-height: 27px;
+                word-spacing: 0;
+                color: #333;
+                height: 26px;
+                width: 312px;
+                border: 1px solid #C6C6C6;
+                margin: -3px 0 0 0;
+                padding: 0 18px 0 6px;
+                min-width: 46px;
+                position: relative;
+                display: inline-block;
+                border-radius: 2px;
+            }
+            .next {
+                background-color: #347AE8;
+                color: #FFF;
+                background-image: url(34a7e8.png);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                font-weight: bold;
+                line-height: 29px;
+                text-align: center;
+                vertical-align: bottom;
+                white-space: pre;
+                word-spacing: 0;
+                height: 29px;
+                width: 69px;
+                border: 1px solid #2F5BB7;
+                padding: 0 8px;
+                min-height: 46;
+                display: inline-block;
+                box-sizing: border-box;
+                border-radius: 2px;
+                margin: 20px 8px 5px 245px;
+            }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <form action="#" method="get" enctype="multipart/form-data">
+            <div>
+                <legend id="name">Name</legend>
+                    <input type="text" id="first" name="First" placeholder="First"/>
+                    <input type="text" id="last" name="Last" placeholder="Last"/>
+                <legend id="choose">Choose your username</legend>
+                    <input type="text" id="username" name="gmail" placeholder="                                                            @gmail.com"/>
+                <legend class="create">Create a password</legend>
+                    <input type="password" id="create" name="password"/>
+                <legend class="confirm">Confirm your password</legend>
+                    <input type="password" id="confirm" name="password"/>
+                <legend class="birthday">Birthday</legend>
+                    <select id="month">    
+                        <option>Month</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <input type="text" id="day" name="day" placeholder="Day"/>
+                    <input type="text" id="year" name="year" placeholder="Year"/>
+                <legend class="gender">Gender</legend>
+                    <select id="gender" name="Gender">
+                        <option>I am...</option>
+                        <option>Female</option>
+                        <option>Male</option>
+                    </select>
+                <legend class="mobile">Mobile Phone</legend>
+                    <select id="mobile">
+                        <option></option>
+                    </select>
+                <input id="number" type="text" name="number" placeholder="+54" />
+                <legend class="email">Your current email adress</legend>
+                    <input id="email" type="email" name="email" />
+                <legend class="location">Location</legend>
+                    <select id="location" name="location">
+                        <option>Argentina</option>
+                    </select>
+                <br />                              
+                <button class="next">Next Step</button>
+            </div>
+        </form>
+    </body>
+</html>

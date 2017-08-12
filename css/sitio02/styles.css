@@ -1,0 +1,145 @@
+
+
+.menu {
+	background-color: transparent;
+	color: #333;
+    border-radius: 5px;
+    position: fixed;
+    float: right;
+}
+
+label {
+	display: block;
+	cursor: pointer;
+
+}
+
+input {
+	display: none;
+}
+
+.menu__expand {
+	max-height: 0;
+	transition: max-height 0.1s linear;
+    overflow: hidden;
+}
+
+ul li {
+		list-style:  none;
+		text-indent: -25px;
+        line-height: 20px;
+        color: #FF7E00;
+}
+
+input:checked ~ .menu__expand {
+	max-height: 500px;
+}
+
+label img {
+    height: 60px;
+    width: 60px;
+    
+}
+#poster {
+    width: 1518px;
+    
+}
+#description , footer, .movie, .text{
+    width: 1340px;
+    text-align: center;
+    display: block;
+    line-height: 30px;
+    color: #333;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 30px;
+}
+body {
+    margin: 0;
+    background-color: #E5E5E5;
+    
+}
+li a , .info ,#back {
+    text-decoration: none;
+    color: #FF7E00;
+}
+li a:hover {
+    color: #B9b9b9;
+}
+footer>p a {
+    text-decoration: none;
+    color: #FF7E00;
+}
+#posterpelicula {
+    width: 370px;
+    height: 517px;
+    margin-top: 25px;
+    margin-left: 565px;
+
+}
+#argumento {
+    width: 400px;
+}
+#last {
+    padding-bottom:  8px;
+}
+table img{
+  border:3px solid black;
+  border-radius: 10%;
+  height:20%;
+  width:20%;
+  -ms-transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+        }
+table img:hover{
+  border-radius:5%;
+  height:75%;
+  width:75%  
+}
+table {
+    margin: auto;
+    
+}
+.p {
+    width: 600px;
+    text-align: justify;
+    margin-top:  30px;
+    line-height: 30px;
+    color: #333;
+    font-weight: bold;
+    margin-left: 400px;
+
+}
+.cancel a {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #FF7E00;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  transition: color 0.1s linear;
+  text-decoration: none;
+  padding-left: 400px;
+}
+.cancel a:hover {
+  color: #C40500;
+}
+
+#lista {
+    padding-left: 240px;
+}
+#six {
+    margin-bottom: 10px;
+}
+.back {
+    margin: 7px;
+    vertical-align: middle;
+}
+tr>td a {
+    text-decoration: none;
+    color: #FF7E00;
+}
