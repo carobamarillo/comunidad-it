@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Productos</title>
+    <script>
+        window.onload= function (){
+            let lista= document.querySelector('ul');
+            let item1= lista.children.item(0);
+            let item2= lista.children.item(1);
+            let item3= lista.children.item(2);
+            let item4= lista.children.item(3);
+            let item5= lista.children.item(4);
+            let item6= lista.children.item(5);
+            let item7= lista.children.item(6);
+
+            lista.removeChild(item1);
+            lista.removeChild(item2);
+            lista.removeChild(item3);
+            lista.removeChild(item4);
+            lista.removeChild(item5);
+            lista.removeChild(item6);
+            lista.removeChild(item7);
+            
+        }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>Bananas</li>
+      <li>Manzanas</li>
+      <li>Peras</li>
+      <li>Huevos</li>
+      <li>Tomates</li>
+      <li>Lechuga</li>
+      <li>Leche</li>
+    </ul>
+  </body>
+</html>

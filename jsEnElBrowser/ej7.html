@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            window.onload= function() {
+                let numero;
+                let suma=0;
+                //ejercicio 8 let contador=0;
+                alert('Vamos a sumar todos los numeros que Ud. ingrese');                
+                do {
+                    numero=parseInt(prompt('Ingrese un numero'));
+                    //ej8 contador++
+                    suma+=numero
+                    console.log(`El resultado por ahora es: ${suma}`);
+                } while (confirm('Quiere ingresar otro numero?'));
+                console.log(`La suma total es: ${suma}`);
+                //ej8 suma/contador
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

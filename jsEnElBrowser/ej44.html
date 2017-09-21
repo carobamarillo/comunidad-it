@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Propiedades del form</title>
+  <script>
+      window.onload=function(){
+        let form = document.querySelector('form');
+        let username = document.querySelector('#username');
+        let password = document.querySelector('#pass');
+        
+        let ul = document.createElement('ul');
+        let user = document.createElement('li');
+        let pass = document.createElement('li');
+        let valor = function(nombre, valor) {
+          return `Nombre: ${nombre} - Valor: ${valor}`; 
+        }
+        user.innerHTML = valor(username.id, username.value);
+        pass.innerHTML = valor(password.id, password.value);
+        
+        ul.appendChild(user);
+        ul.appendChild(pass);
+        document.body.appendChild(ul);
+      }
+      
+  </script>
+</head>
+<body>
+  <form action="guardar_usuario.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" value="morty"/>
+    <input type="password" id="pass" name="pass" value="12345" />
+    <input type="submit" name="submit" value="Enviar" />
+  </form>
+</body>
+</html>

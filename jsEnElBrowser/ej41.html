@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 41</title>
+        <meta charset="UTF-8">
+        <style>
+           .tachado {
+               text-decoration: line-through;
+           } 
+           li {
+               cursor: pointer;
+           }
+        </style>
+        <script>
+           window.onload=function(){
+            let body=document.querySelector('body');
+            let lista=document.createElement('ul');
+            let tareas=[
+                'Terminar ej',
+                'Leer(M)',
+                'Terminar libro:Mean',
+                'Maquetar proyecto',
+                'Lavar ropa',
+                'Buscar drivers',
+                'Fijarme lo del switch',
+                'Buscar trabajo',
+                'Ir al super',
+                'Llamar al service'
+            ]
+            tareas.forEach(function(tarea) {
+                let elemento = document.createElement('li');
+                elemento.textContent = tarea;
+                elemento.onclick = function() {
+                  elemento.classList.toggle('tachado');
+                }
+                lista.appendChild(elemento);
+              });
+              body.appendChild(lista);
+            }              
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

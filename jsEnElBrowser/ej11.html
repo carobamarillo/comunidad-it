@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            let nombreDeUsuario=prompt('Ingrese nombre de usuario');
+            let password=prompt('Ingrese password');
+            alert(`Bienvenido/a ${nombreDeUsuario}`);
+            const confirmar = function() {
+            if (confirm('Quiere seguir logueado?')) {
+                alert(`${nombreDeUsuario} renovamos tu session`);                
+            } else {
+                alert(`${nombreDeUsuario} ha caducado su sesión por favor vuelva a ingresar`);
+            }                         
+          }          
+          setTimeout(confirmar, 10000);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
