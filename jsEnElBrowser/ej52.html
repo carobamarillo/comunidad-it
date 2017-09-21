@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <script>
+            window.onload=function(){
+                function mostrarPelicula(pelicula) {
+                const contenido = document.querySelector('#contenido');
+                const elemento = document.createElement('p');
+                elemento.textContent = `Nombre: ${pelicula.title}, Episodio: ${pelicula.episode_id}, Año: ${pelicula.release_date}`
+                contenido.appendChild(elemento);
+                }
+
+
+                const xmlhttp = new XMLHttpRequest();
+                const url = 'https://swapi.co/api/films/';
+                const contenido = document.querySelector('#contenido');
+
+                xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                const respuesta = JSON.parse(xmlhttp.responseText);
+                const cantidadDePeliculas = respuesta.count;
+                const peliculas = respuesta.results;
+                contenido.innerHTML = ` <h1>StarWars</h1>`;
+                peliculas.forEach(mostrarPelicula)
+                }
+                };
+
+                xmlhttp.open("GET", url, true);
+
+                xmlhttp.send();
+                }
+        </script>
+    </head>
+    <body>
+    <div style="font-family: sans-serif" id="contenido"></div>
+    </body>
+</html>
